@@ -1,6 +1,10 @@
+$font-dark: #303030;
+$background-dark: #101010;
+$color-light: #ffffff;
+
 .profile{
     text-align: center;
-    color: #303030;
+    color: $font-dark;
 
     .img-profile{
         display: flex;
@@ -38,20 +42,24 @@
                 margin-left: 0;
             }
         }
+
+        a{
+            color: $font-dark;
+        }
     }
 
     .link-profile{
         margin-top: 20px;
         padding: 15px 20px;
-        background-color: #101010;
-        color: #ffffff;
+        background-color: $background-dark;
+        color: $color-light;
         border-radius: 5px;
         display: block;
         text-decoration: none;
 
         p{
             margin: 0;
-            color: #ffffff;
+            color: $color-light;
             font-size: 1em;
             text-align: left;
         }
