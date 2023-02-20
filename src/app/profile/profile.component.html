@@ -1,14 +1,33 @@
 <div class="profile mt-4">
-    <div class="img-profile"><img src="https://source.unsplash.com/HD8KlyWRYYM/100x100" alt="[name]-user-avatar" class="profile"/></div>
-    <h1 class="name-profile">Nick Gerard</h1>
-    <p class="bio-profile">Building Norby</p>
-    <ul class="icons-profile">
-      <li><a href="https://twitter.com/"><fa-icon [icon]="faTwitter"></fa-icon></a></li>
-      <li><a href="https://instagram.com/"><fa-icon class="fa" [icon]="faInstagram"></fa-icon></a></li>
-      <li><a href="https://linkedin.com/in/"><fa-icon [icon]="faLinkedin"></fa-icon></a></li>
-    </ul>
-    <a href="#" class="link-profile col-md-10 offset-md-1">
-      <p>Link</p>
+	<div class="img-profile"><img src="https://source.unsplash.com/HD8KlyWRYYM/100x100" alt="{{user.name}}" class="{{theme.avatarShape}}"/></div>
+	<h1 [style.color]="theme.nameColor" class="name-profile">{{user.name}}</h1>
+	<p [style.color]="theme.bioColor" class="bio-profile">{{user.bio}}</p>
+	<ul class="icons-profile">
+		<li><a href="https://twitter.com/{{user.twitter}}"><fa-icon [icon]="faTwitter"></fa-icon></a></li>
+		<li><a href="https://instagram.com/{{user.instagram}}"><fa-icon class="fa" [icon]="faInstagram"></fa-icon></a></li>
+		<li><a href="https://linkedin.com/in/{{user.linkedin}}"><fa-icon [icon]="faLinkedin"></fa-icon></a></li>
+	</ul>
+	<a [style.background-color]="theme.linkBGColor" 
+	   [style.border-radius.px]="theme.linkBRadius" 
+	   href="{{user.link}}" class="link-profile col-md-10 offset-md-1">
+		<p [style.color]="theme.linkColor">Link</p>
     </a>
 </div>
-<app-edit></app-edit>
+
+<app-edit
+[(name)]="user.name"
+[(bio)]="user.bio"
+[(twitter)]="user.twitter"
+[(instagram)]="user.instagram"
+[(linkedin)]="user.linkedin"
+[(link)]="user.link"
+
+[(avatarShape)]="theme.avatarShape"
+
+[(nameColor)]="theme.nameColor"
+[(bioColor)]="theme.bioColor"
+
+[(linkBRadius)]="theme.linkBRadius"
+[(linkBGColor)]="theme.linkBGColor"
+[(linkColor)]="theme.linkColor"
+></app-edit>
