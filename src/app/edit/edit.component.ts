@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-edit',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent {
-
+  
+  public show:boolean = false;
+  
+  toggle() {
+    this.show = !this.show;
+  }
 }

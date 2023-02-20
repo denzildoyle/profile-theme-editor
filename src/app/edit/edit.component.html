@@ -1,59 +1,61 @@
 <div class="edit-profile mt-4">
-    <a href="#" class="link-edit">edit</a>
-
-    <div class="mb-3">
-        <label class="form-label">Avator Shape</label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="avatarShape" id="avatarShape1" value="circle">
-            <label class="form-check-label">
-            Circle
-            </label>
+    <a href="#" (click)="toggle()" class="link-edit">edit profile</a>
+    <div *ngIf="show">
+        <div class="mb-3">
+            <label class="form-label">Avator Shape</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="avatarShape" id="avatarShape1" value="circle">
+                <label class="form-check-label">
+                Circle
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="avatarShape" id="avatarShape2" value="square">
+                <label class="form-check-label">
+                Square
+                </label>
+            </div>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="avatarShape" id="avatarShape2" value="square">
-            <label class="form-check-label">
-            Square
-            </label>
+    
+    
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control">
         </div>
+        <div class="mb-3">
+            <label class="form-label">Bio</label>
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Twitter</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Instagram</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Linkedin</label>
+            <input type="text" class="form-control">
+        </div>
+    
+        <div class="mb-3">
+            <label class="form-label">Text color</label>
+            <input type="color" class="form-control form-control-color">
+        </div>
+    
+    
+        <div class="mb-3">
+            <label class="form-label">Name color</label>
+            <input type="range" class="form-range" min="0" max="100">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Background Color</label>
+            <input type="color" class="form-control form-control-color">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Text Color</label>
+            <input type="color" class="form-control form-control-color">
+        </div>        
     </div>
-
-
-    <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Bio</label>
-        <textarea class="form-control" rows="3"></textarea>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Twitter</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Instagram</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Linkedin</label>
-        <input type="text" class="form-control">
-    </div>
-
-    <div class="mb-3">
-        <label class="form-label">Text color</label>
-        <input type="color" class="form-control form-control-color">
-    </div>
-
-
-    <div class="mb-3">
-        <label class="form-label">Name color</label>
-        <input type="range" class="form-range" min="0" max="100">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Background Color</label>
-        <input type="color" class="form-control form-control-color">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Text Color</label>
-        <input type="color" class="form-control form-control-color">
-    </div>
+</div>
